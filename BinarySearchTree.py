@@ -28,3 +28,19 @@ class BinarySearchTree:
 				inp_node.parent = current
 			else:
 				self.__addNode(inp_node, current.right_child)
+
+
+	def in_order_travers(self):
+		self.__visit_inorder(self.__root)
+
+
+	def __process(self, node):
+		print(node.value)
+
+
+	def __visit_inorder(self, current):
+		if current == None:
+			return
+		self.__visit_inorder(current.left_child)
+		self.__process(current)
+		self.__visit_inorder(current.right_child)
