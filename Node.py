@@ -1,11 +1,11 @@
 class Node:
-	__parent = None
-	__left_child = None
-	__right_child = None
-	__value = None
+	parent = None
+	left_child = None
+	right_child = None
+	value = None
 
 	def __init__(self, value):
-		self.__parent = None
-		self.__left_child = None
-		self.__right_child = None
+		self.parent = None
+		self.left_child = None
+		self.right_child = None
 		self.value = value
