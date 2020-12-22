@@ -3,9 +3,10 @@ from Node import Node
 class BinarySearchTree:
 
 	__root = None
-
+	__size = 0
 	def __init__(self):
 		self.__root = None
+		self.__size = 0
 
 	# add method that kick off the adding methodology
 	def add(self, value):
@@ -14,7 +15,7 @@ class BinarySearchTree:
 			self.__root = node 
 		else:
 			self.__addNode(node, self.__root)
-
+		self.__size +=1
 
 	# the recursive add method
 	# performe the add algorithm
@@ -119,7 +120,7 @@ class BinarySearchTree:
 				parent.right_child = None
 			# just repleace the node value with the current value
 			node.value = current.value
-
+		self.__size -=1
 		return True
 
 
